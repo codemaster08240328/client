@@ -16,7 +16,7 @@ declare global {
 }
 
 function App() {
-  const { loading, error, data } = useAsyncFetch<any>('http://localhost:4000/media-items');
+  const { loading, error, data } = useAsyncFetch<any>(`${process.env.REACT_APP_BASEAPI}/media-items`);
 
   return (
     <div className="App">
